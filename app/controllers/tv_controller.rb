@@ -7,6 +7,5 @@ class TvController < ApplicationController
 
   def show
     @tvshow = Tmdb::TV.detail(params[:id])
-    @image = "https://image.tmdb.org/t/p/w500"
   end
 end

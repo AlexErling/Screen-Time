@@ -1,0 +1,47 @@
+
+<h3 class="text-center"><%= @movie.original_title %></h3>
+<div class ="row">
+  <div class = "col">
+  <% if @movie.poster_path != nil %>
+    <% image = @image + @movie.poster_path %>
+    <%= image_tag(image) %>
+  <% end %>
+  </div>
+
+  <div class="col pull-right">
+
+      <p>Description: <%= @movie.overview %></p>
+
+      <p> Genre(s): <% @movie.genres.each do |g| %>
+            <%= g.name %>
+    <% end %>
+    </p>
+
+    <p>Studio:
+      <% @movie.production_companies.each do |q| %>
+      <%= q.name %>
+      <% end %>
+    </p>
+
+    <p> Relase date: <%= @movie.release_date %> </p>
+
+
+    <p>Budget: <%= number_to_currency(@movie.budget) %> </p>
+    <p>Revenue: <%= number_to_currency(@movie.revenue) %> </p>
+
+    <p> More information:<%= link_to "IMBD Profile", "http://www.imdb.com/title/#{@movie.imdb_id}"%> </p>
+    <p> Runtime: <%= @movie.runtime %> minutes </p>
+
+    <p> Rating: <%= @movie.vote_average %>/10.0 </p>
+
+
+    <% if @movie.homepage.present? %>
+    <p> Homepage: <%= link_to @movie.homepage, @movie.homepage %>
+    <% end %>
+
+
+      <% if @movie.imdb_id.present? %>
+    <p> <%= link_to "Click Here for IMDB Profile", "https/www.imdb.com/title/" + @movie.imdb_id %> </p>
+        <% end %>
+  </div>
+</div>
