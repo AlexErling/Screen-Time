@@ -1,0 +1,52 @@
+// Place all the styles related to the Tv controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.item, .poster, .card {
+  padding: 10px;
+}
+
+.container {
+  padding-top: 10px;
+}
+
+.image_content {
+  padding-bottom:  10px;
+}
+
+.picture {
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  margin: 10px;
+}
+
+.left {
+    float: left;
+    width: 33%;
+    text-align: left;
+}
+
+
+.center {
+    float: left;
+    width: 34%;
+    text-align: center;
+}
+
+
+.right {
+    float: left;
+    width: 33%;
+    text-align: right;
+}
+
+.float {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px
+}

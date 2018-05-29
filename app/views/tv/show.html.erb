@@ -1,0 +1,26 @@
+  <h3 class="text-center"><%= @tvshow.name %></h3>
+
+  <p> Genre(s): <% @tvshow.genres.each do |g| %>
+          <%= g.name %>
+  <% end %>
+  </p>
+
+  <p> Created by: <% @tvshow.created_by.each do |g| %>
+          <%= g.name %>
+  <% end %>
+  </p>
+
+  <p>Description: <%= @tvshow.overview %></p>
+
+  <p>Number of Seasons: <%= @tvshow.number_of_seasons %></p>
+
+
+  <p> Number of Episodes: <%= @tvshow.number_of_episodes %> </p>
+
+  <p> Rating: <%= @tvshow.vote_average %>/10 </p>
+
+  <p> First Air Date: <%= @tvshow.first_air_date%> </p>
+  <p> Last Air Date: <%= @tvshow.last_air_date%> </p>
+  <% if @tvshow.homepage.present? %>
+  <p> Homepage: <%= link_to @tvshow.homepage, @tvshow.homepage %>
+  <% end %>
