@@ -1,1 +1,18 @@
-<h6> Welcome to the home page </h6>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <h1 class="display-3">Welcome to ScreenTime!</h1>
+  <p class="lead">ScreenTime is a movie database that allows you to look up information on tv, movies, and people.</p>
+  <hr class="my-4">
+  <div class = "row ">
+  <p class="lead col-lg-4 col-md-4 col-sm-8">
+    <%= link_to "Search Tv", tv_index_path, :class => "btn btn-primary btn-lg" %>
+    </p>
+      <p class="lead col-lg-4 col-md-4 col-sm-8">
+    <%= link_to "Search Movies", movie_index_path, :class => "btn btn-primary btn-lg" %>
+        </p>
+      <p class="lead col-lg-4 col-md-4  col-sm-8">
+    <%= link_to "Search People", people_path, :class => "btn btn-primary btn-lg" %>
+        </p>
+      </div>
+    </div>
+</div>

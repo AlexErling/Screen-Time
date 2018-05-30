@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :tv
   resources :movie
   resources :people
+  resources :search
 end

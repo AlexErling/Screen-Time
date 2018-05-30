@@ -2,5 +2,70 @@
 @import "bootstrap";
 @import "bootswatch/lux/bootswatch";
 @import "font-awesome";
-
 @import "*";
+
+.item, .poster, .card {
+  padding: 10px;
+}
+
+.container {
+  padding-top: 10px;
+}
+
+.image_content {
+  padding-bottom:  10px;
+}
+
+.picture {
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  max-width: 100%;
+  margin: 5px;
+  height: auto;
+}
+
+.left {
+    float: left;
+    width: 33%;
+    text-align: left;
+}
+
+
+.center {
+    float: left;
+    width: 34%;
+    text-align: center;
+}
+
+
+.right {
+    float: left;
+    width: 33%;
+    text-align: right;
+}
+
+.float {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.padding {
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+.dropdown-menu {
+  left: auto;
+  top: auto;
+}
+
+.jumbotron {
+  margin-top: 50px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: black;
+}

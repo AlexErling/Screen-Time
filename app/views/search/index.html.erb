@@ -1,0 +1,35 @@
+<h1> Results </h1>
+<div>
+  <% if @tvsearch.total_results != 0 %>
+  <h3>TV Shows:</h3>
+  <%@tvsearch.results.each do |t| %>
+  <div = "col-4">
+  <%= link_to t.name, tv_path(t.id) %>
+  <% end %>
+  <% end %>
+<div>
+
+<div>
+
+  <% if @moviesearch.total_results != 0 %>
+    <h3>Movie:</h3>
+    <% @moviesearch.results.each do |m| %>
+    <div = "col-4">
+    <%= link_to m.original_title, movie_path(m.id) %>
+    </div>
+    <% end %>
+  <% end %>
+
+</div>
+
+<div>
+    <% if @personsearch.total_results != 0 %>
+  <h1>Person:</h1>
+<% @personsearch.results.each do |p| %>
+<div = "col-4">
+<%= link_to p.name, person_path(p.id) %>
+</div>
+<% end %>
+<% end %>
+
+</div>

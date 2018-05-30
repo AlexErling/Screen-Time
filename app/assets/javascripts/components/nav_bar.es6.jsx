@@ -18,11 +18,12 @@ class NavBar extends React.Component {
             <li className="nav-item">
               <a className="nav-link" href="/people">People</a>
             </li>
-          </ul>
-          <form className="form-inline my-2 my-lg-0" abineguid="C705D782F0194A7A84D013DFF95A5E92">
-            <input className="form-control mr-sm-2" type="text" placeholder="Search"/>
-            <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-          </form>
+            </ul>
+            <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <SearchContainer />
+           </li>
+           </ul>
         </div>
      </nav>
     );

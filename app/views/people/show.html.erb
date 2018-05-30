@@ -8,14 +8,27 @@
   </div>
   <div class ="col-9">
 
-    <p>Biography: <%= @person.biography %> </p>
+    <% if @person.biography != nil %>
+      <p>Biography: <%= @person.biography %> </p>
+    <% end %>
 
-    <p>Born: <%= @person.birthday %> </p>
-    <p>Place of Birth: <%= @person.place_of_birth %> </p>
+    <% if @person.birthday != nil %>
+      <p>Born: <%= @person.birthday %> </p>
+    <% end %>
 
-    <p>Gender: <%= @person.gender == 2? "Male" : "Female" %></p>
-    <div>
-    <%= link_to "Click here for IMBD Profile", "http://www.imdb.com/name/#{@person.imdb_id}"%>
-    </div>
+    <% if @person.place_of_birth != nil %>
+      <p>Place of Birth: <%= @person.place_of_birth %> </p>
+    <% end %>
+
+
+    <% if @person.gender != nil %>
+      <p>Gender: <%= @person.gender == 2? "Male" : "Female" %></p>
+    <% end %>
+
+    <p>
+      <% if @person.imdb_id != nil %>
+      <%= link_to "Click here for IMBD Profile", "http://www.imdb.com/name/#{@person.imdb_id}"%>
+      <% end %>
+    </p>
     </div>
 </div>
