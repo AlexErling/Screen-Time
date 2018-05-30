@@ -1,0 +1,21 @@
+<h3 class="text-center padding"><%= @person.name %></h3>
+<div class ="row">
+  <div class="col-3">
+    <% if @person.profile_path != nil %>
+      <% image = @image + @person.profile_path %>
+      <%= image_tag(image, :class => "mx-auto d-block picture") %>
+    <% end %>
+  </div>
+  <div class ="col-9">
+
+    <p>Biography: <%= @person.biography %> </p>
+
+    <p>Born: <%= @person.birthday %> </p>
+    <p>Place of Birth: <%= @person.place_of_birth %> </p>
+
+    <p>Gender: <%= @person.gender == 2? "Male" : "Female" %></p>
+    <div>
+    <%= link_to "Click here for IMBD Profile", "http://www.imdb.com/name/#{@person.imdb_id}"%>
+    </div>
+    </div>
+</div>

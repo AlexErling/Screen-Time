@@ -1,0 +1,31 @@
+<h1 class= "text-center padding"> Popular People </h1>
+<div class ="row">
+  <% @people.results.each do |p| %>
+  <div class= "col-3">
+
+    <% if p.profile_path != nil %>
+      <% image = @image + p.profile_path %>
+      <%= image_tag(image, :class => "mx-auto d-block picture" ) %>
+      <% end %>
+    <h6 class="text-center"><%= link_to p.name, person_path(p.id) %></h6>
+          </div>
+  <% end %>
+</div>
+
+<div>
+  <p class="left">
+ <% if @people.page >= 2 %>
+   <%= link_to "Previous Page", people_path(:page => @people.page.to_i - 1 ) %>
+ <% end %>
+ </p>
+  <p class="center">
+   Currently on Page: <%= @people.page %> of <%= @people.total_pages %>
+
+ </p>
+   <p class="right">
+ <% if @people.page < 1000 %>
+   <%= link_to "Next Page", people_path(:page => @people.page.to_i + 1 ) %>
+ <% end %>
+ </p>
+
+</div>
