@@ -1,6 +1,7 @@
 class SearchResultsList extends React.Component {
   render () {
     return (
+
       <ul className="dropdown-menu show">
       {this.renderMovieHeading()}
       {this.renderMovies()}
