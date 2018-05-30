@@ -1,0 +1,8 @@
+<h1 class= "text-center padding"> Search Movies By Genre </h1>
+<div class = "row ">
+<% @moviegenres.each do |m| %>
+<div class = "col-6 text-center">
+<%= link_to m.name, genre_path(m.id) %>
+</div>
+<% end %>
+</div>

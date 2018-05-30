@@ -1,0 +1,29 @@
+<h1 class= "text-center padding">
+  <% @moviegenres.each do |m| %>
+  <%  if m.id == @moviegenre.id %>
+  <%= m.name %>
+<% end %>
+<% end %>
+</h1>
+
+<% @moviegenre.results.each do |m| %>
+<p>
+<%= link_to m.original_title, movie_path(m.id) %>
+</p>
+<% end %>
+
+<div>
+  <p class="left">
+ <% if @moviegenre.page >= 2 %>
+   <%= link_to "Previous Page", genre_path(:page => @moviegenre.page.to_i - 1 ) %>
+ <% end %>
+ </p>
+  <p class="center">
+   Currently on Page: <%= @moviegenre.page %> of 1000
+
+ </p>
+   <p class="right">
+ <% if @moviegenre.page < 1000 %>
+   <%= link_to "Next Page", genre_path(:page => @moviegenre.page.to_i + 1 ) %>
+ <% end %>
+ </p>

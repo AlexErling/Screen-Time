@@ -13,7 +13,7 @@
       <p>Description: <%= @movie.overview %></p>
 
       <p> Genre(s): <% @movie.genres.each do |g| %>
-            <%= g.name %>
+            <%= link_to g.name, genre_path(g.id) %>
     <% end %>
     </p>
 
@@ -29,7 +29,6 @@
     <p>Budget: <%= number_to_currency(@movie.budget) %> </p>
     <p>Revenue: <%= number_to_currency(@movie.revenue) %> </p>
 
-    <p> More information:<%= link_to "IMBD Profile", "http://www.imdb.com/title/#{@movie.imdb_id}"%> </p>
     <p> Runtime: <%= @movie.runtime %> minutes </p>
 
     <p> Rating: <%= @movie.vote_average %>/10.0 </p>

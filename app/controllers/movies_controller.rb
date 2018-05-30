@@ -1,4 +1,4 @@
-class MovieController < ApplicationController
+class MoviesController < ApplicationController
   def index
     @movies= Tmdb::Movie.popular(page: params[:page])
     @image = "https://image.tmdb.org/t/p/w500"
